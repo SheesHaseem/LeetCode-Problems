@@ -1,6 +1,11 @@
 class Solution:
     def isPalindrome(self, x: int):
-        return str(x) == str(x)[::-1]
+        p = str(x)
+        l = len(p)
+        for i in range(int(l/2)):
+            if p[i] != p[l-(i+1)]:
+                return False
+        return True
 
 
 
